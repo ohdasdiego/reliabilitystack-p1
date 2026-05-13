@@ -108,6 +108,8 @@ Expected output: 15 lines each returning `503`. Within 5 minutes, Azure Monitor 
 evaluate the rule, the action group will fire the webhook, and a PagerDuty incident
 will be created. Once requests stop, the incident auto-resolves.
 
+![Azure Monitor alert fired — Http5xx count crossed threshold of 1, reaching 2](assets/azure-monitor-alert-fired.jpg)
+
 ![PagerDuty incident created and auto-resolved after 5xx threshold was breached](assets/pagerduty-incident-resolved.jpg)
 
 ---
