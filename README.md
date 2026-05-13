@@ -139,6 +139,8 @@ curl http://localhost:5000/health/unhealthy
 curl "http://localhost:5000/health/slow?delay_seconds=3"
 ```
 
+> **Local vs. production server:** `python app.py` uses Flask's built-in dev server and is fine for local testing. In production, Azure App Service requires an explicit startup command to run the app through Gunicorn. The startup command `gunicorn --bind=0.0.0.0:8000 app:app` is set via the Azure CLI, which is why `gunicorn` is listed in `requirements.txt`.
+
 ---
 
 ## Key Concepts Demonstrated
